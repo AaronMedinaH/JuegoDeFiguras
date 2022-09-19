@@ -128,13 +128,8 @@ namespace JuegoDeFiguras
         }
         private Color SeleccionarColor()
         {
-            int valor = randomColorRGB.Next(0, 255);
 
-            int R = randomColorRGB.Next(0, 255);
-            int G = randomColorRGB.Next(0, 255);
-            int B = randomColorRGB.Next(0, 255);
-
-            return Color.FromArgb(R, G, B);
+            return Color.FromArgb(randomColorRGB.Next(0,255), randomColorRGB.Next(0, 255), randomColorRGB.Next(0, 255));
 
             /*
             //int valor = new Random().Next(0, 11);
@@ -205,7 +200,7 @@ namespace JuegoDeFiguras
         #region MÉTODOS ASÍNCRONOS (DESUSO)
         public async Task<int> CrearObjetos()
         {
-            var task = new Task<int>(() => {
+            var task_crear = new Task<int>(() => {
                 int caso = 1;
                 while (true)
                 {
@@ -235,14 +230,14 @@ namespace JuegoDeFiguras
 
                 return 0;
             });
-            task.Start();
-            int valReturn = await task;
+            task_crear.Start();
+            int valReturn = await task_crear;
             return valReturn;
 
         }
         public async Task<int> RecolectarObjetos()
         {
-            var task = new Task<int>(() => {
+            var task_recolectar = new Task<int>(() => {
                 while (true)
                 {
                     if (this.ContenedorFiguras.Count > 0)
@@ -254,8 +249,8 @@ namespace JuegoDeFiguras
                 }
                 return 0;
             });
-            task.Start();
-            int valReturn = await task;
+            task_recolectar.Start();
+            int valReturn = await task_recolectar;
             return valReturn;
 
         }

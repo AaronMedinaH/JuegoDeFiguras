@@ -80,26 +80,30 @@ namespace JuegoDeFiguras
                         this.Contador++;
                     }
                 }
-                // ELIMINAR FIGURAS ATRAPADAS
-                foreach (Figura figuraAEliminar in figurasAEliminar)
+                void elimin()
                 {
-                    this.Figuras.Remove(figuraAEliminar);
+                    foreach (Figura figuraAEliminar in figurasAEliminar)
+                    {
+                        this.Figuras.Remove(figuraAEliminar);
+                    }
                 }
+
+                // ELIMINAR FIGURAS ATRAPADAS
+                elimin();
                 #endregion
 
                 // ELIMINAR FIGURAS QUE DESAPARECEN POR DEBAJO
-                figurasAEliminar = new List<Figura>();
+                //figurasAEliminar = new List<Figura>();
                 foreach (Figura figura in this.Figuras)
                 {
                     figura.Y += valorDeMovimientoEnY;
                     if (figura.Y > this.AltoDibujo)
+                    {
                         figurasAEliminar.Add(figura);
+                    }
+
                 }
-                foreach(Figura figuraAEliminar in figurasAEliminar)
-                {
-                    this.Figuras.Remove(figuraAEliminar);
-                }
-                
+                elimin();
             }
             catch (Exception ex)
             {

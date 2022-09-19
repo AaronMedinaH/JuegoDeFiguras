@@ -33,8 +33,8 @@
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.miJuego = new System.Windows.Forms.ToolStripMenuItem();
             this.miJuego_Iniciar = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.miJuego_Parar = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbCanvas)).BeginInit();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
@@ -70,21 +70,21 @@
             // miJuego_Iniciar
             // 
             this.miJuego_Iniciar.Name = "miJuego_Iniciar";
-            this.miJuego_Iniciar.Size = new System.Drawing.Size(180, 22);
+            this.miJuego_Iniciar.Size = new System.Drawing.Size(106, 22);
             this.miJuego_Iniciar.Text = "Iniciar";
             this.miJuego_Iniciar.Click += new System.EventHandler(this.miJuego_Iniciar_Click);
+            // 
+            // miJuego_Parar
+            // 
+            this.miJuego_Parar.Name = "miJuego_Parar";
+            this.miJuego_Parar.Size = new System.Drawing.Size(106, 22);
+            this.miJuego_Parar.Text = "Parar";
+            this.miJuego_Parar.Click += new System.EventHandler(this.miJuego_Parar_Click);
             // 
             // timer1
             // 
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // miJuego_Parar
-            // 
-            this.miJuego_Parar.Name = "miJuego_Parar";
-            this.miJuego_Parar.Size = new System.Drawing.Size(180, 22);
-            this.miJuego_Parar.Text = "Parar";
-            this.miJuego_Parar.Click += new System.EventHandler(this.miJuego_Parar_Click);
             // 
             // Form1
             // 
